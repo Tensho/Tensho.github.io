@@ -1,4 +1,4 @@
-<a href="about">About</a>
+<a href="about">Кем я себя возомнил?</a>
 
 <ul>
   {% for post in site.posts %}
