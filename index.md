@@ -1,3 +1,5 @@
+<a href="about">About</a>
+
 <ul>
   {% for post in site.posts %}
     <li>
