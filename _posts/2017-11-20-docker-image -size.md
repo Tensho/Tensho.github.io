@@ -1,5 +1,6 @@
 ---
 title: Маленький вопрос о больших (?) размерах Docker образов
+tags: docker image
 ---
 
 ### {{ page.title }}
