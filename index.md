@@ -1,5 +1,3 @@
-<a href="about">Кем я себя возомнил?</a>
-
 <ul>
   {% for post in site.posts %}
     <li>
