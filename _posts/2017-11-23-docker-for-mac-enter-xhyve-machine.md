@@ -4,6 +4,9 @@ date: 2017-11-23
 tags: docker vm xhyve
 ---
 
+### {{ page.title }}
+###### {{ page.date | date: "%d/%m/%Y" }}
+
 Чтобы попасть внуть виртуальной машины, которую запускает **Docker for Mac** на базе [MacOS Hypervisor Framework](https://developer.apple.com/documentation/hypervisor) под капотом, нужно передать любезно подготовленный терминал в качестве параметра `screen` утилите:
 
 ```
