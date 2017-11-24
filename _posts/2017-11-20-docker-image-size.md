@@ -3,60 +3,40 @@ title: Маленький вопрос о больших (?) размерах Do
 tags: docker image
 ---
 
-Сегодня меня поставили в тупик вопросом о размере Docker образа в случае добавления и удаления из него файлов в процессе построения. Имея представление о слоевой файловой системе ([OverlayFS](https://en.wikipedia.org/wiki/OverlayFS) по умолчанию на текущий момент) в Docker я сразу же дал ответ, но когда мой ответ уверенно назвали неверным, я засомневался, хорошо ли я понимаю слои образов. Поэтому я решил перепроверить мои догадки, чтобы завтра с уверенностью сказать, что я таки прав ^_^ Чтобы не вдаваться в конкретные формулировки я просто приведу пример `Dockerfile` и задам вопрос своими словами:
-
+Имея представление о слоевой файловой системе ([OverlayFS](https://en.wikipedia.org/wiki/OverlayFS) по умолчанию на текущий момент) в Docker, я ни разу не убеждался практически в том, как измененяется размер образа в зависимости от определенных команд внутри Dockerfile. Давайте рассмотрим один из примеров того, почему образы могут быть больше, чем мы ожидаем.
+ 
 ```Dockerfile
-FROM java:alpine                # 145 Mb
+FROM alpine               # 3.97 Mb
 
-COPY filename.ext /filename.ext # 55 Mb
+COPY north.m4a /north.m4a # 4.57 Mb – file mod 644
 
-RUN rm -rf /filename.ext        # ? Mb
+RUN chmod 400 north.m4a   # ? Mb
+
+RUN rm north.m4a          # ? Mb
 ```
 
-Нам известно, что базовый образ `java:alpine` занимает скажем 145 Мб, а файл `filename.ext` занимает скажем 55 Мб. Сколько будет занимать финальный образ после выполнения всех команд внутри `Dockerfile`?
+**Вопрос**
 
-Мой ответ был **200 (145 + 55) Мб**, хотя мой оппонент утверждал, что правильный ответ – **255 (145 + 55 + 55) Мб**. Давайте разберемся на примере, где же правда. Java я не очень люблю, поэтому возьму для замеров базовый образ `ruby:alpine`.
+Нам известно, что базовый образ `alpine` занимает скажем 3.97 Мб, а файл `north.m4a` занимает 4.57 Мб. Сколько будет занимать финальный образ после выполнения всех команд внутри `Dockerfile`?
 
-* 1
-
-```Dockerfile
-FROM ruby:alpine
-```
+**Ответ**
 
 ```
-$ docker build -t probe:1 .
-$ docker images --format "{{.Size}}" probe:1
-66.2MB
+$ docker build -t probe .
+$ docker images --format "{{.Size}}" probe
+13.1MB # 3.97 + 4.57 + 4.57
 ```
 
-* 2
-
-```Dockerfile
-FROM ruby:alpine
-
-COPY north.m4a /north.m4a
-```
+Почему присутствует задвоение размера файла `north.m4a`? Фактически это вопрос о [понимани слоев в Docker образах](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers). Если запустить команду `docker history`, то можно увидить, что изменение атрибутов файла добавленного в слое 2 (`COPY`) влечет за собой полное копирование этого файла в слой 3 (`RUN chmod`) с обновленными атрибутами. Последний же слой (`RUN rm`) хоть и удаляет файл из файловой системы, но никак не влияет на историю.
 
 ```
-$ docker build -t probe:2 .
-$ docker images --format "{{.Size}}" probe:2
-70.8MB
+$ docker history --format "table {{.ID}}\t{{.CreatedBy}}\t{{.Size}}" probe
+IMAGE               CREATED BY                                      SIZE
+da06ea73a176        /bin/sh -c rm /north.m4a                        0B
+51dbdbfc96af        /bin/sh -c chmod 400 /north.m4a                 4.57MB
+cb2341afb9e2        /bin/sh -c #(nop) COPY file:ad3c5aa1deab1b...   4.57MB
+053cde6e8953        /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B
+<missing>           /bin/sh -c #(nop) ADD file:1e87ff33d1b6765...   3.97MB
 ```
 
-* 3
-
-```Dockerfile
-FROM ruby:alpine
-
-COPY north.m4a /north.m4a
-
-RUN rm -rf /north.m4a
-```
-
-```
-$ docker build -t probe:3 .
-$ docker images --format "{{.Size}}" probe:3
-70.8MB
-```
-
-Как видно из шагов эксперимента образ не потолстел после удаления файла (шаг 3), ЧТД – что и требовалость доказать.
+![Jekyll]({{ "/assets/docker-image-layers.svg" | absolute_url }})
