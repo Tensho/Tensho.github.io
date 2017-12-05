@@ -21,14 +21,17 @@ RUN rm north.m4a          # ? Mb
 
 **Ответ**
 
+{% raw %}
 ```
 $ docker build -t probe .
 $ docker images --format "{{.Size}}" probe
 13.1MB # 3.97 + 4.57 + 4.57
 ```
+{% endraw %}
 
 Почему присутствует задвоение размера файла `north.m4a`? Фактически это вопрос о [понимани слоев в Docker образах](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers). Если запустить команду `docker history`, то можно увидить, что изменение атрибутов файла добавленного в слое 2 (`COPY`) влечет за собой полное копирование этого файла в слой 3 (`RUN chmod`) с обновленными атрибутами. Последний же слой (`RUN rm`) хоть и удаляет файл из файловой системы, но никак не влияет на историю.
 
+{% raw %}
 ```
 $ docker history --format "table {{.ID}}\t{{.CreatedBy}}\t{{.Size}}" probe
 IMAGE               CREATED BY                                      SIZE
@@ -38,5 +41,6 @@ cb2341afb9e2        /bin/sh -c #(nop) COPY file:ad3c5aa1deab1b...   4.57MB
 053cde6e8953        /bin/sh -c #(nop)  CMD ["/bin/sh"]              0B
 <missing>           /bin/sh -c #(nop) ADD file:1e87ff33d1b6765...   3.97MB
 ```
+{% endraw %}
 
 ![Jekyll]({{ "/assets/docker-image-layers.svg" | absolute_url }})
