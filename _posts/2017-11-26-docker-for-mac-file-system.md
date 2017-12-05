@@ -1,6 +1,6 @@
 ---
 title: Файловая система Docker for Mac
-tags: docker osxfs
+tags: docker filesystem osxfs
 ---
 
 Данный пост представляет собой вольный тезисный перевод статей о **osxfs**.
