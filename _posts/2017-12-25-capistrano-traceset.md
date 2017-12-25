@@ -3,7 +3,7 @@ title: Трассировка переменных capistrano
 tags: capistrano
 ---
 
-В [capistrano3](http://capistranorb.com) можно устанваливать (`set`) и извлекать (`fetch`) переменные в процессе деплоя. При этом есть специальная переменная `:print_config_variables`, которая включает режим трассировки переменных.
+В [capistrano3](http://capistranorb.com) можно устанваливать (`set`) и извлекать (`fetch`) переменные в процессе деплоя. При этом есть специальная переменная [`:print_config_variables`](https://github.com/capistrano/capistrano/blob/master/lib/capistrano/configuration/variables.rb#L107), которая включает режим трассировки переменных.
 ```ruby
 # config/deploy.rb
 
