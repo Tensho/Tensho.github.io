@@ -5,4 +5,3 @@
 - Jekyll doesn't convert links to anchor tags (`<a>`)
 - Add Twitter reference
 - Add photo
-- Add RSS feed
