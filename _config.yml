@@ -2,5 +2,13 @@ theme: jekyll-theme-slate
 title: Tensho
 description: Заметки непутевого программиста
 
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: true
+
 plugins:
   - jekyll-feed
