@@ -1,5 +1,6 @@
 ---
 title: Долгоживущее соединение RabbitMQ и AWS ELB 
+date: 2017-12-05
 tags: aws elb rabbitmq idle connection
 ---
 

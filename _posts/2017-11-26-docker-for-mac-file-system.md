@@ -1,5 +1,6 @@
 ---
 title: Файловая система Docker for Mac
+date: 2017-11-26
 tags: docker filesystem osxfs
 ---
 

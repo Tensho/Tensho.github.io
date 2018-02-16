@@ -1,5 +1,6 @@
 ---
 title: docker-sync
+date: 2017-12-10
 tags: docker sync filesystem osxfs performance
 ---
 

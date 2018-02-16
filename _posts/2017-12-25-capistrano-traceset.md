@@ -1,5 +1,6 @@
 ---
 title: Трассировка переменных capistrano 
+date: 2018-01-18
 tags: capistrano
 ---
 
