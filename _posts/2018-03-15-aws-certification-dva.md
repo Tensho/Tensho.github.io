@@ -1,5 +1,5 @@
 ---
-title: Моя AWS сертификация
+title: Моя AWS DVA сертификация
 date: 2018-03-15
 tags: aws certification solution architect associate
 ---
@@ -8,13 +8,13 @@ tags: aws certification solution architect associate
 
 ![AWS Certification Roadmap]({{ "/assets/aws-cert-roadmap.png" | absolute_url }})
 
-Совсем недавно я сдал **AWS Developer – Associate** и планирую также сдавать **AWS Solution Architect - Associate** в ближайшем будущем. На мой субъективный взгляд наиболее полезной специализацией является Solution Architect, даже если вы ежедневно работает с AWS как Software Engineer или System Engineer. В конце концов хороший инженер должен понимать, как устроены инструменты и почему используется тот или иной в зависимости от поставленной задачи. Прочитать документацию по внедрению и запрограммировать уже осознанно выработанное решение обычно не состовляет проблем.
+Совсем недавно я сдал **AWS Developer – Associate (DVA)** и планирую также сдавать **AWS Solutions Architect - Associate (SSA)** в ближайшем будущем. На мой субъективный взгляд наиболее полезной специализацией является Solution Architect, даже если вы ежедневно работает с AWS как Software Engineer или System Engineer. В конце концов хороший инженер должен понимать, как устроены инструменты и почему используется тот или иной в зависимости от поставленной задачи. Прочитать документацию по внедрению и запрограммировать уже осознанно выработанное решение обычно не состовляет проблем.
 
 На Developer экзамене большинство вопросов касались:
 
 - **DynamoDB**. [Capacity Units (CU)](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/HowItWorks.ProvisionedThroughput.html), [Burst Capacity](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/GuidelinesForTables.html#GuidelinesForTables.Bursting), [Scan](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Scan.html), [Indexes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/SecondaryIndexes.html)
-- **S3**. [CORS](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html), [Server-Side Encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html), [Pre-Signed URL](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html), оптимальная именование иерархии объектов, хранение архивных данных  
-- **SNS**. [Subscriber](https://docs.aws.amazon.com/sns/latest/dg/welcome.html), [Message Attributes](https://docs.aws.amazon.com/sns/latest/dg/SNSMessageAttributes.html) 
+- **S3**. [CORS](https://docs.aws.amazon.com/AmazonS3/latest/dev/cors.html), [Server-Side Encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html), [Pre-Signed URL](https://docs.aws.amazon.com/AmazonS3/latest/dev/PresignedUrlUploadObject.html), оптимальное именование иерархии объектов, хранение архивных данных
+- **SNS**. [Subscriber](https://docs.aws.amazon.com/sns/latest/dg/welcome.html), [Message Attributes](https://docs.aws.amazon.com/sns/latest/dg/SNSMessageAttributes.html)
 - **SQS** [Long Polling](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-long-polling.html)
 
 Было по парочке вопросов о Beanstalk, CloudFormation, Lambda, EC2 + AMI. 
