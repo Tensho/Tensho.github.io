@@ -1,3 +1,8 @@
+### Run
+
+    $ docker build . -t tensho.github.io
+    $ docker run --rm -p 4000:4000 -v $PWD:/blog tensho.github.io
+
 ### TODO
 
 - Add post excerpts
