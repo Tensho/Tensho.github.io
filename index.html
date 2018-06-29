@@ -1,7 +1,5 @@
 ---
 layout: default
-pagination: 
-  enabled: true
 ---
 
 <ul>
@@ -19,7 +17,7 @@ pagination:
   ul.pagination {
     text-align: center;
   }
-   
+
   ul.pagination li {
     display: inline;
     border: 1px solid black;
@@ -35,7 +33,7 @@ pagination:
     <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">&lt;&lt;</a>
   </li>
   {% endif %}
-  
+
   {% if paginator.page_trail %}
     {% for trail in paginator.page_trail %}
       <li {% if page.url == trail.path %}class="selected"{% endif %}>
@@ -43,12 +41,12 @@ pagination:
       </li>
     {% endfor %}
   {% endif %}
-  
+
   {% if paginator.next_page %}
   <li>
     <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">&gt;&gt;</a>
   </li>
   {% endif %}
-  
+
 </ul>
 {% endif %}

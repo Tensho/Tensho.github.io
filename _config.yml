@@ -2,15 +2,8 @@ theme: jekyll-theme-slate
 title: Tensho
 email: andrew.babichev@gmail.com
 description: Заметки непутевого программиста
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: '/page/:num/'
-  title: ':title'
-  sort_reverse: true
-  trail:
-    before: 2
-    after: 2
+paginate: 5
+paginate_path: "/page/:num"
 
 defaults:
   -
@@ -22,4 +15,4 @@ defaults:
 
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
+  - jekyll-paginate
