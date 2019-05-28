@@ -2,6 +2,16 @@ theme: jekyll-theme-slate
 title: Tensho
 email: andrew.babichev@gmail.com
 description: Заметки непутевого программиста
+
+# Exclude directories and/or files from the conversion
+exclude:
+  - .idea
+  - bin
+  - Dockerfile
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
 paginate: 5
 paginate_path: "/page/:num"
 
