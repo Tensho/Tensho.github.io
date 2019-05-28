@@ -3,6 +3,8 @@ title: Tensho
 email: andrew.babichev@gmail.com
 description: Заметки непутевого программиста
 
+ga_id: UA-127561266-1
+
 # Exclude directories and/or files from the conversion
 exclude:
   - .idea
