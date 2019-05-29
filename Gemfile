@@ -9,3 +9,7 @@ group :jekyll_plugins do
   gem 'jekyll-feed'      # RSS
   gem 'jekyll-paginate'
 end
+
+group :test do
+  gem 'html-proofer'
+end
