@@ -7,9 +7,7 @@
     $ docker build . -t tensho.github.io
     $ docker run --rm -p 4000:4000 -v $PWD:/blog tensho.github.io
     
-### `github-pages`
-
-- https://pages.github.com/versions
+### Check GitHub Pages Versions 
 
     $ bundle exec github-pages versions
     
@@ -27,6 +25,7 @@
 ### Jekyll
 
 - [Gem-base themes](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes)
+- [Check GitHub Pages gem versions](https://pages.github.com/versions)
 
 ### TODO
 
