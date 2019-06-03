@@ -1,0 +1,46 @@
+# user: circleci
+# working directory: /home/circleci/project
+
+version: 2.1
+
+executors:
+  ruby-container:
+    docker:
+      - image: circleci/ruby:2.5.4
+
+jobs:
+  build:
+    description: Build
+    executor: ruby-container
+    environment:
+      - NOKOGIRI_USE_SYSTEM_LIBRARIES: true
+    steps:
+      - setup_remote_docker
+      - checkout
+      - run:
+          command: bundle install --path vendor/bundle
+      - run:
+          command: bundle exec jekyll build
+      - persist_to_workspace:
+          root: .
+          paths:
+            - ./*
+  test:
+    description: Test
+    executor: ruby-container
+    steps:
+      - setup_remote_docker
+      - attach_workspace:
+         at: .
+      - run:
+          command: bundle check --path vendor/bundle
+      - run:
+          command: bundle exec htmlproofer ./_site --assume_extension --disable_external --check_external_hash --check_html --check_favicon --check_opengraph --check_img_http
+
+workflows:
+  main:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
