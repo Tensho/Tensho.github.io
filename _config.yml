@@ -8,7 +8,9 @@ ga_id: UA-127561266-1
 # Exclude directories and/or files from the conversion
 exclude:
   - .idea
+  - .circleci
   - bin
+  - vendor # bundle install --deployment
   - Dockerfile
   - Gemfile
   - Gemfile.lock

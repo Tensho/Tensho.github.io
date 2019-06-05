@@ -21,7 +21,6 @@
                                       --check_opengraph \
                                       --check_img_http
                                       
-    
 ### Jekyll
 
 - [Gem-base themes](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes)
@@ -29,7 +28,6 @@
 
 ### TODO
 
-- [CI] Add `html-proofer`
 - Add post excerpts
 - Fit images to the section width
 - [CI] Check spelling and punctuation automatically
