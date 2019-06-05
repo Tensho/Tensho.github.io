@@ -28,8 +28,11 @@
 
 ### TODO
 
+- Transfer TODOs to GitHub Projects
+- [CI] Add badge to README
+- [CI] [Cache dependencies](https://circleci.com/docs/2.0/caching)
+- [CI] Check spelling and punctuation automatically
 - Add post excerpts
 - Fit images to the section width
-- [CI] Check spelling and punctuation automatically
 - Jekyll doesn't convert links to anchor tags (`<a>`)
 - Add photo
