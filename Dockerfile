@@ -8,7 +8,7 @@ WORKDIR /blog
 
 COPY Gemfile* ./
 
-RUN bundle install --jobs 4
+RUN bundle install --jobs 4 --without development
 
 COPY . .
 

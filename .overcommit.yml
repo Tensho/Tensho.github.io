@@ -1,0 +1,13 @@
+verify_signatures: false
+
+PreCommit:
+  ALL:
+    exclude:
+      - 'assets/**/*'
+      - 'favicon.png'
+
+  TrailingWhitespace:
+    enabled: true
+
+  LineEndings:
+    enabled: true

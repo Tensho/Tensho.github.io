@@ -10,6 +10,10 @@ group :jekyll_plugins do
   gem 'jekyll-paginate'
 end
 
+group :development do
+  gem 'overcommit'
+end
+
 group :test do
   gem 'html-proofer'
 end
