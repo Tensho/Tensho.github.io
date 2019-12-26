@@ -22,7 +22,7 @@ provider (aws)
     variables.tf
 ```
 
-Уровень `provider` выделен для того, чтобы в будущем добавлять папки с модулями использующими другие провайдеры. Например, в ближайшем будущем я хочу управлять пользователями и репозиториями [GitHub через Terraform](https://www.terraform.io/docs/providers/github/index.html). Одним из вариантов может служить разбиение папок сугубо по сервисам провайдера. Например, для AWS это будет выглядеть как-то так: 
+Уровень `provider` выделен для того, чтобы в будущем добавлять папки с модулями использующими другие провайдеры. Например, в ближайшем будущем я хочу управлять пользователями и репозиториями [GitHub через Terraform](https://www.terraform.io/docs/providers/github/index.html). Одним из вариантов может служить разбиение папок сугубо по сервисам провайдера. Например, для AWS это будет выглядеть как-то так:
 
 ```
 aws
@@ -70,7 +70,7 @@ aws
       main.tf # = ec2 + rds + sqs
       outputs.tf
       variables.tf
-    service-2 
+    service-2
       main.tf # = ecs + dynamo + sqs
       outputs.tf
       variables.tf
@@ -105,7 +105,7 @@ aws_account
     environment
       application_or_common_aws_service_per_environment
         ...
-```  
+```
 
 И пример:
 
@@ -318,7 +318,7 @@ callisto
         terraform.tfvars
 ...
 ```
- 
+
 В заключении хочу подчеркнуть еще раз, что такая структура позволяет очень быстро понять, что творится в `production ` облаке глядя только на код в GitHub. А по каким критериям организован ваш Terraform код?
 
 ### Cписок ресурсов

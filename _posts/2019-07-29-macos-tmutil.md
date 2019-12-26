@@ -17,7 +17,7 @@ ID            : D397B0D6-2714-47D1-9860-4B7616EC61CC
 ```
 ```
 $ sudo tmutil disable
-``` 
+```
 ```
 $ sudo tmutil removedestination D397B0D6-2714-47D1-9860-4B7616EC61CC
 ```
@@ -35,7 +35,7 @@ $ sudo tmutil addexclusion ~/Downloads
 ```
 $ sudo tmutil enable
 ```
-``` 
+```
 $ sudo tmutil startbackup --auto
 ```
 ```
@@ -58,7 +58,7 @@ com.apple.TimeMachine.2019-07-28-162831
 com.apple.TimeMachine.2019-07-29-015308
 com.apple.TimeMachine.2019-07-29-094335
 ```
-``` 
+```
 $ sudo tmutil calculatedrift /Volumes/Time\ Machine\ Backups/Backups.backupdb/Tensho\ MBP
 
 2019-07-29-010618 - 2019-07-29-021211

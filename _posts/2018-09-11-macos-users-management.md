@@ -6,7 +6,7 @@ tags: macos user dscl dscacheutil sysadminctl useradd usermod userdel
 
 Современные операционные системы [многопользовательские](https://en.wikipedia.org/wiki/Multi-user_software). И macOS не является исключение в этом плане. Даже если вы единственный пользователь своего MacBook или iMac и не создавали ни одного дополнительного персонажа, все равно есть еще другие предустановленные пользователи для системного обслуживания (root, daemon, nobody). Давайте попробуем разобраться, какие есть инструменты управления пользователями в яблочном саду.
 
-Рядовой пользователь macOS обычно управляет настройками пользователей и групп через графический интерфейс системных настроек – **System Preferences –> Users & Groups**. Из названия видно, что пользователи могу принадлежать (одной или нескольким) группам, но в рамках этой заметки я бы хотел сконцентрироваться больше на пользователях, а не на группах. И конечно же мы будем эксперементировать из командной строки в рамках **macOS High Sierra 10.13.6**. 
+Рядовой пользователь macOS обычно управляет настройками пользователей и групп через графический интерфейс системных настроек – **System Preferences –> Users & Groups**. Из названия видно, что пользователи могу принадлежать (одной или нескольким) группам, но в рамках этой заметки я бы хотел сконцентрироваться больше на пользователях, а не на группах. И конечно же мы будем эксперементировать из командной строки в рамках **macOS High Sierra 10.13.6**.
 
 Итак для начала давайте составим достаточно стандартный список команд управления пользователями:
 
@@ -31,7 +31,7 @@ tags: macos user dscl dscacheutil sysadminctl useradd usermod userdel
     nobody
     root
     tensho
-    
+
 ##### Список обыкновенных пользователей
 
     $ dscl . -list /Users | grep -v '^_'
@@ -40,8 +40,8 @@ tags: macos user dscl dscacheutil sysadminctl useradd usermod userdel
     nobody
     root
     tensho
-    
-##### UID и GID обыкновенных пользователей 
+
+##### UID и GID обыкновенных пользователей
 
      $ dscl . -list /Users UniqueID | grep -v '^_'
      daemon                  1
@@ -67,9 +67,9 @@ tags: macos user dscl dscacheutil sysadminctl useradd usermod userdel
      Andrew Babichev
     UniqueID: 501
     UserShell: /bin/zsh
-    
+
 или
-    
+
     $ dscacheutil -q user -a name tensho
     name: tensho
     password: ********
@@ -77,15 +77,15 @@ tags: macos user dscl dscacheutil sysadminctl useradd usermod userdel
     gid: 20
     dir: /Users/tensho
     shell: /bin/zsh
-    gecos: Andrew Babichev 
-    
+    gecos: Andrew Babichev
+
 #### Создание нового пользователя
 
-    $ sudo dscl . -create /Users/bob 
+    $ sudo dscl . -create /Users/bob
     $ sudo dscl . -passwd /Users/bob
-    
+
 или
-    
+
     $ sudo sysadminctl -addUser bob -password -
     2018-09-11 22:59:41.728 sysadminctl[65397:1950525] ----------------------------
     2018-09-11 22:59:41.728 sysadminctl[65397:1950525] No clear text password or interactive option was specified (adduser, change/reset password will not allow user to use FDE) !
@@ -104,11 +104,11 @@ tags: macos user dscl dscacheutil sysadminctl useradd usermod userdel
 ##### Изменение установленного свойства
 
     $ sudo dscl . -change /Users/bob RealName Bob
-    
+
 #### Удаление пользователя
 
-    $ sudo dscl . -delete /Users/bob 
-    
+    $ sudo dscl . -delete /Users/bob
+
 или
-    
+
     $ sudo sysadminctl -deleteUser bob

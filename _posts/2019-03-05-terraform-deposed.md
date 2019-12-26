@@ -4,7 +4,7 @@ date: 2019-03-05
 tags: terraform deposed
 ---
 
-Нежданно-негаданно наткнулся сегодня на одно из возможных состояний ресурса, которое до сих пор [недокументированно](https://github.com/hashicorp/terraform/issues/10753). Когда выставляется в [жизненном цикле](https://www.terraform.io/docs/configuration/resources.html#lifecycle-lifecycle-customizations) ресурса директива `create_before_destroy`, то как следует их названия прежде чем удалить старый ресурс, сначала создается новый. 
+Нежданно-негаданно наткнулся сегодня на одно из возможных состояний ресурса, которое до сих пор [недокументированно](https://github.com/hashicorp/terraform/issues/10753). Когда выставляется в [жизненном цикле](https://www.terraform.io/docs/configuration/resources.html#lifecycle-lifecycle-customizations) ресурса директива `create_before_destroy`, то как следует их названия прежде чем удалить старый ресурс, сначала создается новый.
 
 ```HCL
 resource "aws_instance" "example" {

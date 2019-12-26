@@ -4,7 +4,7 @@ date: 2019-03-13
 tags: globalize eager load activerecord
 ---
 
-История еще одного расследования. Недавно мой проект частично перешел на стратегию сборки Rails приложений AMI + EBS через Packer + Terraform. В рамках этого перехода всплыла одна интересная деталь касающаяся сразу нескольких библиотек – [`rake`](https://github.com/ruby/rake), [`rails-observers`](https://github.com/rails/rails-observers), [`globalize`](https://github.com/globalize/globalize). Случилось так, что при [компиляции ассетов](https://guides.rubyonrails.org/asset_pipeline.html#precompiling-assets) (`rake assets:precompile`) на Packer Builder инстансе вывалилась ошибка подключения к БД:  
+История еще одного расследования. Недавно мой проект частично перешел на стратегию сборки Rails приложений AMI + EBS через Packer + Terraform. В рамках этого перехода всплыла одна интересная деталь касающаяся сразу нескольких библиотек – [`rake`](https://github.com/ruby/rake), [`rails-observers`](https://github.com/rails/rails-observers), [`globalize`](https://github.com/globalize/globalize). Случилось так, что при [компиляции ассетов](https://guides.rubyonrails.org/asset_pipeline.html#precompiling-assets) (`rake assets:precompile`) на Packer Builder инстансе вывалилась ошибка подключения к БД:
 
     amazon-ebsvolume: PG::ConnectionBad: timeout expired
 
@@ -18,7 +18,7 @@ tags: globalize eager load activerecord
 
 config.active_record.observers = %i[data_sync_observer]
 ````
-    
+
 3. Rails загружает `railtie` гемов, включая `rails-observers` гем
 4. Гем `rails-observers` вычитывает конфигурацию и подгружает класс [наблюдателя](https://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%B1%D0%BB%D1%8E%D0%B4%D0%B0%D1%82%D0%B5%D0%BB%D1%8C_(%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD_%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F)) согласно конвенции.
 5. `DataSyncObserver` класс имеет код, который ссылается на классы моделей:
@@ -31,7 +31,7 @@ class DataSyncObserver < ActiveRecord::Observer
     Sector, Sector::Translation,
     Company, Company::Translation
   ]
-  
+
   ...
 end
 ```
@@ -52,7 +52,7 @@ Rails.application.configure do
   # and those relying on copy on write to perform better.
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
-  
+
   ...
 end
 ```
@@ -65,7 +65,7 @@ end
 class Sector < ApplicationRecord
   translates :name,
              :description
-             
+
   ...
 end
 ```
@@ -76,7 +76,7 @@ end
 
 В надежде понять задумку автора `globalize` делать досрочное подключение к БД я побрел на GitHub:
 
-1. В ["rails asset:precompile attempts to connect to DB because of globalize"](https://github.com/globalize/globalize/issues/601) Issue признают косяк и говорят что пофиксили. 
+1. В ["rails asset:precompile attempts to connect to DB because of globalize"](https://github.com/globalize/globalize/issues/601) Issue признают косяк и говорят что пофиксили.
 2. ["Check if there's a connection before table_exists?"](https://github.com/globalize/globalize/pull/602) PR фактически вводит проверку подключения в виде условия с вызовом [`connected?`](https://api.rubyonrails.org/classes/ActiveRecord/ConnectionHandling.html#method-i-connected-3F) метода.
 3. Там же в комментариях ссылаются на ["Support for Rails 5.1"](https://github.com/globalize/globalize/pull/619#commitcomment-22174073) PR, в котором вызов `connected?` заменили на перехват исключения [`ActiveRecord::NoDatabaseError`](https://api.rubyonrails.org/classes/ActiveRecord/NoDatabaseError.html). Автор резонно утверждает, что при запуске некоторых `globalize` юнит-тестов подключения к БД действительно нет.
 4. Однако, вот не задача, **ActiveRecord просто пробрасывает оригинальное исключение в случае, когда соединение к БД установить не удалось**. Например, `pg` выдает `PG::ConnectionBad`. Вполне логично было бы ожидать какое-то более абтрактное исключение вроде `ActiveRecord::NoConnectionError`, но увы. Также в ["ActiveRecord::NoDatabaseError not raised"](https://github.com/rails/rails/issues/32994) Issue поднимает аналогичный вопрос в контексте обработки исключений MySQL и Postgres адаптеров в условиях отсутствия БД. Вот как обрабатывает исключения прилетающие из [`ActiveRecord::ConnectionAdapters::PostgreSQLAdapter`]( https://github.com/rails/rails/blob/master/activerecord/lib/active_record/connection_adapters/postgresql_adapter.rb#L48):
@@ -93,7 +93,7 @@ rescue ::PG::Error => error
   end
 end
 ```
- 
+
 А так [`ActiveRecord::ConnectionAdapters::Mysql2Adapter`](https://github.com/rails/rails/blob/master/activerecord/lib/active_record/connection_adapters/mysql2_adapter.rb#L24) ищет подстроку `"Unknown database"`:
 
 ```ruby
@@ -114,7 +114,7 @@ end
 <blockquote>
 However, that doesn't help Globalize, because there are plenty of connection errors that we don't want to cover up. That's better addressed from a different angle: error handling aside, it's very bad form for a model definition to cause a database connection. Globalize is designed incorrectly: it should not cause a database connection when loading the model definition, and should instead hook the model's load_schema! to run at the right time.
 </blockquote>
- 
+
 Да, девочки и мальчики, быть нетерпеливым не всегда хорошо.
 
 Поиск решения в процессе...

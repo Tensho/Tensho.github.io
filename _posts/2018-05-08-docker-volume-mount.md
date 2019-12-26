@@ -33,7 +33,7 @@ RUN touch x.txt
 
     $ docker run -rm -v shelf:/hole docker-hole touch /hole/y.txt
 
-Проверяем, что именованный том перекрывает (затеняет) данные при монтировании: 
+Проверяем, что именованный том перекрывает (затеняет) данные при монтировании:
 
     $ docker run --rm -v shelf:/hole docker-hole ls /hole
     y.txt

@@ -18,6 +18,6 @@ osxfs                118284248  89517540  22872412  80% /private
 osxfs                118284248  89517540  22872412  80% /tmp
 osxfs                118284248  89517540  22872412  80% /Volumes
 osxfs                118284248  89517540  22872412  80% /Users
-``` 
+```
 
 Для выхода из screen сессии нужно нажать комбинацию [`Ctrl + a Ctrl + \`](https://www.gnu.org/software/screen/manual/html_node/Quit.html#Quit).

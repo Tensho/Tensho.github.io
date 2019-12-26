@@ -14,7 +14,7 @@ data "template_file" "alpha" {
     y = "Y"
   }
 }
-``` 
+```
 
 и непосредственно шаблон
 
@@ -37,7 +37,7 @@ $ terraform console
 X and Y
 > exit
 ```
-Свойство [`rendered`](https://www.terraform.io/docs/providers/template/d/file.html#rendered) ресурса данных [`template_file`](https://www.terraform.io/docs/providers/template/d/file.html) как раз позволяет взять финальный результат рендеринга в виде строки. 
+Свойство [`rendered`](https://www.terraform.io/docs/providers/template/d/file.html#rendered) ресурса данных [`template_file`](https://www.terraform.io/docs/providers/template/d/file.html) как раз позволяет взять финальный результат рендеринга в виде строки.
 
 А еще удобно эксперементировать однострочниками в таком виде:
 

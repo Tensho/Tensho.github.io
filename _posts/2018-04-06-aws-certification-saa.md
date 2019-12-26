@@ -36,7 +36,7 @@ tags: aws certification solutions architect associate
 - Количество вопросов: 65
 
 ### Cписок ресурсов
- 
+
  - Курс [A Cloud Guru "Certified Solutions Architect - Associate 2018"](https://acloud.guru/learn/aws-certified-solutions-architect-associate) за авторством Раяна Круненберга
  - Книга ["AWS Certified Solutions Architect Official Study Guide: Associate Exam"](https://www.goodreads.com/book/show/32611599-aws-certified-solutions-architect-official-study-guide)
  - Whitepapers
@@ -44,7 +44,7 @@ tags: aws certification solutions architect associate
    - [AWS Well Architected Framework](https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf)
  - Видео
    - [AWS re:Invent 2015: DevOps at Amazon: A Look at Our Tools and Processes (DVO202)](https://www.youtube.com/watch?v=esEFaY0FDKc)
-  
+
 А также практика, практика, практика.
 
 ### Результат

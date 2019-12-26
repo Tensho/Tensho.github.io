@@ -1,5 +1,5 @@
 ---
-title: Трассировка переменных capistrano 
+title: Трассировка переменных capistrano
 date: 2018-01-18
 tags: capistrano
 ---
@@ -10,7 +10,7 @@ tags: capistrano
 # config/deploy.rb
 
 lock '3.8.2'
- 
+
 set :print_config_variables, true
 ```
 

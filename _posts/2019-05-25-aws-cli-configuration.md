@@ -22,20 +22,20 @@ tags: aws cli configuration
 
 #### Очень быстро
 
-    $ aws configure set profile.kaori.aws_access_key_id FAKE4JIGTOYI64PIPZZZ 
+    $ aws configure set profile.kaori.aws_access_key_id FAKE4JIGTOYI64PIPZZZ
     $ aws configure set profile.kaori.aws_secret_access_key FAKE0fri2ZZ8iB33xJMgl6TapB2lFE3rpmFtFYXZ
 
 #### Ультра быстро
 
     $ aws configure
     $ aws configure --propfile kaori
-    
+
 ### Приоритет источников конфигурации
 
 1. [Опции CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-options.html) (`--profile`, `--region`, `--output`)
 2. [Перменные окружения](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html) (`AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_SESSION_TOKEN`)
 3. [Файлы `~/.aws/credentials` и `~/.aws/config`](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
-4. IAM Роль для ECS контейнера или [EC2 инстанса](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-metadata.html) 
+4. IAM Роль для ECS контейнера или [EC2 инстанса](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-metadata.html)
 
 ### Как использовать?
 
@@ -50,7 +50,7 @@ tags: aws cli configuration
 
 - Для EC2 инстансам и ECS контейнерам кошерно раздавать доступ через IAM роли. Благодаря такому подходу можно избежать необходимости ротировать перманентные ключи, а использовать исключительно временно предоставленные STS сервисом.
 
-- Все официальные AWS SDK (клиенты) работают с паролями/явками по такому же принципу, как и стандартный питоновский AWS CLI 
+- Все официальные AWS SDK (клиенты) работают с паролями/явками по такому же принципу, как и стандартный питоновский AWS CLI
 
 - Есть небольшая разница в форматировании секций профайлов
 

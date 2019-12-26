@@ -13,7 +13,7 @@ tags: docker vm disk image
 
     $ ls -lh ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.raw | awk '{print $5, $9}'
     64G /Users/tensho/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.raw
-    
+
     $ du -h ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.raw
     3.2G   /Users/tensho/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/Docker.raw
 
