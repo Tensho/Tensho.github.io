@@ -32,6 +32,7 @@
 - [CI] Add badge to README
 - [CI] [Cache dependencies](https://circleci.com/docs/2.0/caching)
 - [CI] Check spelling and punctuation automatically
+- [CI] Switch to GitHub Actions
 - Add post excerpts
 - Fit images to the section width
 - Jekyll doesn't convert links to anchor tags (`<a>`)
