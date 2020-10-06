@@ -4,7 +4,7 @@ date: 2020-10-06
 tags: linux system logs syslog journal
 ---
 
-В Linux логирует почти все – от событий ядра до пользовательских действий. В стандартной папке `/var/log` находятся логи операционной системы, сервисов, утилит и приложений. Для примера вот как выглядит папка на моем [AWS workspace](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) (Amazon Linux 2/CentOS):
+В Linux логируется почти все – от событий ядра до пользовательских действий. В стандартной папке `/var/log` находятся логи операционной системы, сервисов, утилит и приложений. Для примера вот как выглядит папка на моем [AWS workspace](https://docs.aws.amazon.com/workspaces/latest/adminguide/amazon-workspaces.html) (Amazon Linux 2/CentOS):
 
 ```
 $ ls -1a /var/log
