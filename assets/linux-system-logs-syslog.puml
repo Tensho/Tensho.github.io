@@ -1,0 +1,42 @@
+@startuml
+skinparam componentStyle rectangle
+
+title Syslog
+
+node "Host A" {
+    [Utility] --> [Local Syslogd] : syslog(3)
+    [Service] --> [Local Syslogd]
+    [OS] --> [Local Syslogd]
+    [Application] --> [Local Syslogd]
+    note left of [Local Syslogd]
+        Listen on /dev/log socket
+        at 514 or 6514 (encrypted) port
+
+        Transport:
+        * TCP
+        * UDP
+
+        Protocol (plain text):
+        * Headers
+        * Message
+
+        Implementations:
+        * rsyslogd
+        * syslog-ng
+    end note
+    [Local Syslogd] .> [/var/log/messages] : save
+}
+
+cloud "SumoLogic" {
+    [Local Syslogd] ..> [SumoLogic Syslogd]
+}
+
+node "Host B" {
+    [Local Syslogd] ..> [Remote Syslogd] : forward (optional)
+}
+
+cloud "Loggy" {
+    [Local Syslogd] ..> [Loggy Syslogd]
+}
+
+@enduml

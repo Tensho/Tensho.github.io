@@ -1,0 +1,18 @@
+@startuml
+skinparam componentStyle rectangle
+
+title Journal
+
+node "Host A" {
+    [OS] --> [Journald] : kmsg
+    [Application] --> [Journald]: sd_journal_print(3)
+    [Systemd Service] --> [Journald] : stdout/stderr
+    note left of [Local Syslog Server]
+      Protocol (text/binary):
+      * Compressed
+      * Authenticated
+    end note
+    [Journald] .> [/var/log/journal/**/*] : save
+}
+
+@enduml

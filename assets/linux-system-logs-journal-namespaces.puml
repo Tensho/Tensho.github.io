@@ -1,0 +1,21 @@
+@startuml
+skinparam componentStyle rectangle
+
+title Journal Namespaces
+
+cloud "default" {
+    [/etc/systemd/journald.conf] #lightgrey
+    [/etc/systemd/journald.conf] .up.> [journald] : configure
+}
+
+cloud "boomka" {
+    [/etc/systemd/journald@boomka.conf] #lightgrey
+    [/etc/systemd/journald@boomka.conf] .up.> [journald@.boomka] : configure
+}
+
+[client] -left-> [journald] : write
+[client] -right-> [journald@.boomka] : write
+
+note right of "journald@.boomka" : Separate daemon
+
+@enduml

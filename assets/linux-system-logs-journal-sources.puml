@@ -1,0 +1,16 @@
+@startuml
+skinparam componentStyle rectangle
+
+title Journal Sources
+
+node {
+    [Systemd Unit\nSTDOUT/STDERR] -down--> [journald]
+    [Application] -down-> [sd_journal_print(3)]
+    [Application] -down-> [syslog(3)]
+    [sd_journal_print(3)] -down-> [journald]
+    [Kernel] -down-> [syslog(2)]
+    [syslog(2)] -down-> [journald]
+    [syslog(3)] -down-> [journald]
+}
+
+@enduml
