@@ -15,6 +15,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - assets/*.puml
 
 paginate: 5
 paginate_path: "/page/:num"
@@ -27,6 +28,6 @@ defaults:
     values:
       comments: true
 
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
+jekyll-spaceship:
+  processors:
+    - plantuml-processor

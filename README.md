@@ -1,3 +1,9 @@
+## Development
+
+### Install Dependencies
+
+    $ brew bundle --no-upgrade
+
 ### Run
 
     $ bundle exec jekyll serve
@@ -11,7 +17,7 @@
 
     $ bundle exec github-pages versions
 
-### Test
+## Test
 
     $ bundle exec htmlproofer ./_site --assume_extension \
                                       --disable_external \
@@ -21,13 +27,14 @@
                                       --check_opengraph \
                                       --check_img_http
 
-### Jekyll
+## Jekyll
 
 - [Gem-base themes](https://jekyllrb.com/docs/themes/#understanding-gem-based-themes)
 - [Check GitHub Pages gem versions](https://pages.github.com/versions)
 
-### TODO
+## TODO
 
+- Add PluntUML files rendering
 - Transfer TODOs to GitHub Projects
 - [CI] Add badge to README
 - [CI] [Cache dependencies](https://circleci.com/docs/2.0/caching)
