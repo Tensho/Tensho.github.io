@@ -1,6 +1,6 @@
 #    scratch
-#    alpine:3.7
-FROM ruby:2.5.1-alpine
+#    alpine:3.12
+FROM ruby:2.7.2-alpine
 
 RUN apk --no-cache add --update build-base git
 
