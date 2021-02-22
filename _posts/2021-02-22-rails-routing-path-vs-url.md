@@ -35,7 +35,7 @@ ArgumentError (Missing host to link to! Please provide the :host parameter, set 
 "https://www.example.com:3000/users"
 ```
 
-Если не указывать схему и порт, то по умолчанию будет использоваться `http` и неявный 80 порт.
+Если не указывать схему и порт, то по умолчанию будут использоваться HTTP и неявный 80 порт.
 
 ActiveStorage является еще одним компонентом, который опирается на маршртуные хелперы.
 
