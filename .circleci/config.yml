@@ -35,7 +35,7 @@ jobs:
       - run:
           command: bundle check --path vendor/bundle
       - run:
-          command: bundle exec htmlproofer ./_site --assume_extension --disable_external --check_external_hash --check_html --check_favicon --check_opengraph --check_img_http
+          command: bundle exec htmlproofer ./_site --assume_extension --disable_external --check_external_hash --check_html --check_favicon --check_opengraph --check_img_http --file-ignore _site/2020/10/06/linux-system-logs.html
 
 workflows:
   main:
