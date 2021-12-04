@@ -6,7 +6,7 @@ tags: rspec
 
 Назад к основам – инициализация RSpec для быстрых экспериментов с тестами. Добавляем гем в `Gemfile`:
 
-```
+```ruby
 # Gemfile
 
 source 'https://rubygems.org'
@@ -16,7 +16,7 @@ gem 'rspec'
 
 Устанавливаем гем и инициализируем RSpec:
 
-```
+```shell
 $ bundle
 $ rspec --init
   create   .rspec
@@ -25,7 +25,7 @@ $ rspec --init
 
 Добавляем примитивный тест:
 
-```
+```ruby
 require 'spec_helper'
 
 RSpec.shared_examples 'truth' do
@@ -50,7 +50,7 @@ end
 ```
 Экспеременитируем:
 
-```
+```shell
 $ rspec
 Run options: include {:focus=>true}
 

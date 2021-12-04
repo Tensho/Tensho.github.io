@@ -6,7 +6,7 @@ tags: rails routing path url
 
 Представим, что у нас имеется простой ресурсный маршрут для пользователей:
 
-```
+```ruby
 # config/routes.rb
 
 resources :users
@@ -14,7 +14,7 @@ resources :users
 
 В Rails впилено куча магии для поддержки [маршрутных хелперов](https://guides.rubyonrails.org/routing.html#path-and-url-helpers), чтобы на базе ресурса можно было выдавать разного рода ссылки. Например, `user_path` возвращает относительный путь, а `user_url`  – абсолютный (схема, хост, порт). По умолчанию во всех Rails окружениях не настроены опции для составления полноценного URL и попытка выписать себе абсолютную ссылку заканчивается вполне ождиаемым исключением:
 
-```
+```ruby
 > Rails.application.routes.default_url_options
 {}
 > Rails.application.routes.url_helpers.users_path
@@ -27,7 +27,7 @@ ArgumentError (Missing host to link to! Please provide the :host parameter, set 
 
 Для разных компонентов Rails, которые работают вне цикла запроса-ответа, есть отдельная настройка `default_url_options`. Например, хост для ActionMailer можно настроить через `Rails.application.config.action_mailer.default_url_options`, чтобы все ссылки в письме были "абсолютными". Сейчас [обсуждается вариант унификаиции этой настройки для всех компонентов](https://github.com/rails/rails/issues/39566), но пока что нужно выставлять для каждого отдельно. В частности для примера выше нужно явно выставить соответствующие опции в `Rails.application.routes.default_url_options`:
 
-```
+```ruby
 > Rails.application.routes.default_url_options = { protocol: 'https', host: 'www.example.com', port: 3000 }
 > Rails.application.routes.url_helpers.users_path
 "/users"
@@ -39,7 +39,7 @@ ArgumentError (Missing host to link to! Please provide the :host parameter, set 
 
 ActiveStorage является еще одним компонентом, который опирается на маршртуные хелперы.
 
-```
+```ruby
 # app/models/user.rb
 
 class User < ApplicationRecord
@@ -47,7 +47,7 @@ class User < ApplicationRecord
 end
 ```
 
-```
+```ruby
 > Rails.application.routes.default_url_options
 {}
 > Rails.application.routes.url_helpers.url_for(user.avatar)
