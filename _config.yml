@@ -16,7 +16,11 @@ exclude:
   - Gemfile.lock
   - README.md
   - assets/*.puml
+# Make future date post visible
+# https://stackoverflow.com/questions/30625044/jekyll-post-not-generated
+future: true
 
+# jekyll-paginate
 paginate: 5
 paginate_path: "/page/:num"
 
