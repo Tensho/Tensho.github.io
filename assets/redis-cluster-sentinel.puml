@@ -1,0 +1,49 @@
+@startuml
+
+Title Redis Cluster - Sentinel
+
+skinparam componentStyle rectangle
+
+[Redis Client] as RC1
+[Redis Client] as RC2
+
+component "Redis Cluster" {
+  node "Node" as N1 {
+    [Redis Master] as RM
+    [Redis Sentinel] as RSM #Cyan
+  }
+
+  node "Node" as N2 {
+    [Redis Slave] as RS1
+    [Redis Sentinel] as RSS1
+  }
+
+  node "Node" as N3 {
+    [Redis Slave] as RS2
+    [Redis Sentinel] as RSS2
+  }
+
+  [RSM] -[hidden]-> [RM]
+  [RS1] -[hidden]l-> [RSS1]
+  [RS2] -[hidden]r-> [RSS2]
+
+  [RSM] ..> [RM] : monitor
+  [RSS1] .> [RS1] : monitor
+  [RSS2] .> [RS2] : monitor
+
+  [RSM] <.> [RSS1] : communicate
+  [RSM] <.> [RSS2] : communicate
+  '[RSS1] <.> [RSS2] : communicate
+
+  [RM] ..> [RS1] : replicate
+  [RM] ..> [RS2] : replicate
+}
+
+[RC1] <.> [RSM] : communicate
+[RC1] -> [RM] : write
+[RC2] -> [RM] : write
+[RC2] <.> [RSM] : communicate
+[RC1] -> [RS1] : read
+[RC2] -> [RS2] : read
+
+@enduml

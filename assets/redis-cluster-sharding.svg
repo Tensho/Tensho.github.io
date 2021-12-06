@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="333px" preserveAspectRatio="none" style="width:793px;height:333px;background:#FFFFFF;" version="1.1" viewBox="0 0 793 333" width="793px" zoomAndPan="magnify"><defs><filter height="300%" id="f1bf4ijkjj39cl" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="224" x="278" y="16.708">Redis Cluster - Sharding</text><!--MD5=[0ac70d5a357257da33ce88abad68f4a4]
+cluster S1--><rect fill="#FFFFFF" filter="url(#f1bf4ijkjj39cl)" height="127" style="stroke:#000000;stroke-width:1.5;" width="378" x="205" y="27.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="74" x="357" y="42.9482">Shard #1</text><!--MD5=[dc4eb2012487d12714526fe7f88b694b]
+cluster S2--><rect fill="#FFFFFF" filter="url(#f1bf4ijkjj39cl)" height="127" style="stroke:#000000;stroke-width:1.5;" width="378" x="205" y="194.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="74" x="357" y="209.9482">Shard #2</text><!--MD5=[2c506062beb1c6dcd55d6f7697c81b3b]
+entity RM1--><rect fill="#FEFECE" filter="url(#f1bf4ijkjj39cl)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="112" x="229" y="70.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="239" y="93.9482">Redis Master</text><!--MD5=[7a9726a6fe84c8dd973c43db7c2878b8]
+entity RS1--><rect fill="#FEFECE" filter="url(#f1bf4ijkjj39cl)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="101" x="458" y="70.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="468" y="93.9482">Redis Slave</text><!--MD5=[a7049c52e1e762c56affffc6e4ad6e27]
+entity RM2--><rect fill="#FEFECE" filter="url(#f1bf4ijkjj39cl)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="112" x="229" y="237.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="239" y="260.9482">Redis Master</text><!--MD5=[5921badd903a5b43e14c7bc46574495d]
+entity RS2--><rect fill="#FEFECE" filter="url(#f1bf4ijkjj39cl)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="101" x="458" y="237.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="468" y="260.9482">Redis Slave</text><!--MD5=[54687436f33a7e3dac98e90935d0c87a]
+entity RC11--><rect fill="#FEFECE" filter="url(#f1bf4ijkjj39cl)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="106" x="7" y="70.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="17" y="93.9482">Redis Client</text><!--MD5=[1f2390d0e75bb39a4b0465135ef02e60]
+entity RC12--><rect fill="#FEFECE" filter="url(#f1bf4ijkjj39cl)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="106" x="675" y="70.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="685" y="93.9482">Redis Client</text><!--MD5=[a00350f8310ef7e2877b846ff8871579]
+entity RC21--><rect fill="#FEFECE" filter="url(#f1bf4ijkjj39cl)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="106" x="7" y="237.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="17" y="260.9482">Redis Client</text><!--MD5=[a61452c98d13cc287f2fac437581164a]
+entity RC22--><rect fill="#FEFECE" filter="url(#f1bf4ijkjj39cl)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="106" x="675" y="237.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="685" y="260.9482">Redis Client</text><!--MD5=[12b792cbd43f1e58165a58f28962421e]
+link RM1 to RS1--><path d="M341.037,88.9531 C374.969,88.9531 418.335,88.9531 452.297,88.9531 " fill="none" id="RM1-to-RS1" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="457.664,88.9531,448.664,84.9531,452.664,88.9531,448.664,92.9531,457.664,88.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="372" y="85.02">replicate</text><!--MD5=[11ecf0788d524e286fc8b0a3d3e951d9]
+link RC11 to RM1--><path d="M113.002,88.9531 C146.122,88.9531 189.148,88.9531 223.754,88.9531 " fill="none" id="RC11-to-RM1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="228.797,88.9531,219.797,84.9531,223.797,88.9531,219.797,92.9531,228.797,88.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="144" y="70.02">Key 1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="146" y="85.1528">write</text><!--MD5=[b04c8c043417be0f1ae270bf759e30c1]
+reverse link RS1 to RC12--><path d="M564.484,88.9531 C598.382,88.9531 641.593,88.9531 674.936,88.9531 " fill="none" id="RS1-backto-RC12" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="559.126,88.9531,568.126,92.9531,564.126,88.9531,568.126,84.9531,559.126,88.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="608" y="70.02">Key 1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="29" x="611.5" y="85.1528">read</text><!--MD5=[b53feb884dd78dc0f476dc1c04271943]
+link RM2 to RS2--><path d="M341.037,255.9531 C374.969,255.9531 418.335,255.9531 452.297,255.9531 " fill="none" id="RM2-to-RS2" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="457.664,255.9531,448.664,251.9531,452.664,255.9531,448.664,259.9531,457.664,255.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="372" y="252.02">replicate</text><!--MD5=[05e3767c5f8ab086aac98d6deb1f23b6]
+link RC21 to RM2--><path d="M113.002,255.9531 C146.122,255.9531 189.148,255.9531 223.754,255.9531 " fill="none" id="RC21-to-RM2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="228.797,255.9531,219.797,251.9531,223.797,255.9531,219.797,259.9531,228.797,255.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="144" y="237.02">Key 2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="146" y="252.1528">write</text><!--MD5=[5f19e7aeec8e21f7a71b3334b10f3bd9]
+reverse link RS2 to RC22--><path d="M564.484,255.9531 C598.382,255.9531 641.593,255.9531 674.936,255.9531 " fill="none" id="RS2-backto-RC22" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="559.126,255.9531,568.126,259.9531,564.126,255.9531,568.126,251.9531,559.126,255.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="608" y="237.02">Key 2</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="29" x="611.5" y="252.1528">read</text><!--MD5=[4b4f10fbabbcc21a9bc120400e74dc1e]
+link S2 to S1--><!--MD5=[efae53384cbc2b283d5e5e4f93e1a368]
+@startuml
+Title Redis Cluster - Sharding
+
+skinparam componentStyle rectangle
+left to right direction
+
+[Redis Client] as RC11
+[Redis Client] as RC12
+
+
+component "Shard #1" as S1 {
+  [Redis Master] as RM1
+  [Redis Slave] as RS1
+  
+  [RM1] ..> [RS1] : replicate
+}
+
+[RC11] - -> [RM1] : "Key 1\nwrite"
+[RS1] <- - [RC12] : "Key 1\nread"
+
+[Redis Client] as RC21
+[Redis Client] as RC22
+
+component "Shard #2" as S2 {
+  [Redis Master] as RM2
+  [Redis Slave] as RS2
+  
+  [RM2] ..> [RS2] : replicate
+}
+
+[RC21] - -> [RM2] : "Key 2\nwrite"
+[RS2] <- - [RC22] : "Key 2\nread"
+
+S2 -[hidden]> S1
+@enduml
+
+PlantUML version 1.2021.16beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

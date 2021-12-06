@@ -1,0 +1,25 @@
+@startuml
+
+Title Redis Cluster - Master-Slave Replication
+
+skinparam componentStyle rectangle
+
+[Redis Client] as RC1
+[Redis Client] as RC2
+
+
+component "Redis Cluster" {
+  [Redis Master] as RM
+  [Redis Slave] as RS1
+  [Redis Slave] as RS2
+
+  [RM] ..> [RS1] : replicate
+  [RM] ..> [RS2] : replicate
+}
+
+[RC1] -> [RM] : write
+[RC2] -> [RM] : write
+[RC1] -> [RS1] : read
+[RC2] -> [RS2] : read
+
+@enduml

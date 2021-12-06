@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="638px" preserveAspectRatio="none" style="width:667px;height:638px;background:#FFFFFF;" version="1.1" viewBox="0 0 667 638" width="667px" zoomAndPan="magnify"><defs><filter height="300%" id="f9jic0ge0m3nf" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="260" x="197" y="16.708">Redis Cluster - Multi-Master</text><!--MD5=[041184c80324b7db9861229ed8810e9f]
+cluster RC--><rect fill="#FFFFFF" filter="url(#f9jic0ge0m3nf)" height="396" style="stroke:#000000;stroke-width:1.5;" width="648" x="7" y="128.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="107" x="277.5" y="143.9482">Redis Cluster</text><!--MD5=[3ac0ab816bd3ac1407bf1ea9f71e3a06]
+cluster N1--><polygon fill="#FFFFFF" filter="url(#f9jic0ge0m3nf)" points="55,205.9531,65,195.9531,199,195.9531,199,277.9531,189,287.9531,55,287.9531,55,205.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="189" x2="199" y1="205.9531" y2="195.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="55" x2="189" y1="205.9531" y2="205.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="189" x2="189" y1="205.9531" y2="287.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="95.5" y="221.9482">Node 1</text><!--MD5=[0133f043c69789dc4cd58214554b94f1]
+cluster N2--><polygon fill="#FFFFFF" filter="url(#f9jic0ge0m3nf)" points="259,205.9531,269,195.9531,403,195.9531,403,277.9531,393,287.9531,259,287.9531,259,205.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="393" x2="403" y1="205.9531" y2="195.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="259" x2="393" y1="205.9531" y2="205.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="393" x2="393" y1="205.9531" y2="287.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="299.5" y="221.9482">Node 2</text><!--MD5=[94d4f293082bb29d6657031248a3b2ed]
+cluster N3--><polygon fill="#FFFFFF" filter="url(#f9jic0ge0m3nf)" points="463,205.9531,473,195.9531,607,195.9531,607,277.9531,597,287.9531,463,287.9531,463,205.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="597" x2="607" y1="205.9531" y2="195.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="463" x2="597" y1="205.9531" y2="205.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="597" x2="597" y1="205.9531" y2="287.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="503.5" y="221.9482">Node 3</text><!--MD5=[54116135dded30480c741644461d559a]
+cluster N4--><polygon fill="#FFFFFF" filter="url(#f9jic0ge0m3nf)" points="106,394.9531,116,384.9531,240,384.9531,240,466.9531,230,476.9531,106,476.9531,106,394.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="230" x2="240" y1="394.9531" y2="384.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="106" x2="230" y1="394.9531" y2="394.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="230" x2="230" y1="394.9531" y2="476.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="141.5" y="410.9482">Node 4</text><!--MD5=[6edcf1d20f908f15e5db3731095cb3c9]
+cluster N5--><polygon fill="#FFFFFF" filter="url(#f9jic0ge0m3nf)" points="264,394.9531,274,384.9531,398,384.9531,398,466.9531,388,476.9531,264,476.9531,264,394.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="388" x2="398" y1="394.9531" y2="384.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="264" x2="388" y1="394.9531" y2="394.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="388" x2="388" y1="394.9531" y2="476.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="299.5" y="410.9482">Node 5</text><!--MD5=[aa264dec0b76868395e744de36651d5f]
+cluster N6--><polygon fill="#FFFFFF" filter="url(#f9jic0ge0m3nf)" points="422,394.9531,432,384.9531,556,384.9531,556,466.9531,546,476.9531,422,476.9531,422,394.9531" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="546" x2="556" y1="394.9531" y2="384.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="422" x2="546" y1="394.9531" y2="394.9531"/><line style="stroke:#000000;stroke-width:1.5;" x1="546" x2="546" y1="394.9531" y2="476.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="55" x="457.5" y="410.9482">Node 6</text><!--MD5=[e77b57c13de60b2315db9e91f08a5e63]
+entity RC1--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="106" x="240" y="27.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="250" y="50.9482">Redis Client</text><!--MD5=[9fe05fbe4719a8423c4ef21d0b583fe8]
+entity RC2--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="106" x="381" y="27.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="391" y="50.9482">Redis Client</text><!--MD5=[325c1b443666652e37a5304235ae1638]
+entity RC3--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="106" x="130" y="589.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="140" y="612.9482">Redis Client</text><!--MD5=[389752adb3373649137677fc3ba4930d]
+entity RC4--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="106" x="271" y="589.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="281" y="612.9482">Redis Client</text><!--MD5=[2c506062beb1c6dcd55d6f7697c81b3b]
+entity RM1--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="112" x="71" y="235.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="81" y="258.9482">Redis Master</text><!--MD5=[a7049c52e1e762c56affffc6e4ad6e27]
+entity RM2--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="112" x="275" y="235.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="285" y="258.9482">Redis Master</text><!--MD5=[0bc7591baba76e75e4c9ac38b69b64dd]
+entity RM3--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="112" x="479" y="235.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="92" x="489" y="258.9482">Redis Master</text><!--MD5=[7a9726a6fe84c8dd973c43db7c2878b8]
+entity RS1--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="101" x="122.5" y="424.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="132.5" y="447.9482">Redis Slave</text><!--MD5=[5921badd903a5b43e14c7bc46574495d]
+entity RS2--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="101" x="280.5" y="424.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="290.5" y="447.9482">Redis Slave</text><!--MD5=[2e820fb2a50624e3df7aad72d4616637]
+entity RS3--><rect fill="#FEFECE" filter="url(#f9jic0ge0m3nf)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="101" x="438.5" y="424.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="448.5" y="447.9482">Redis Slave</text><!--MD5=[0471b26eb8dfd6b81121b39c6afd271a]
+link RM1 to RM2--><path d="M188.092,253.9531 C213.876,253.9531 243.841,253.9531 269.653,253.9531 " fill="none" id="RM1-RM2" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="274.757,253.9531,265.757,249.9531,269.757,253.9531,265.757,257.9531,274.757,253.9531" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="183.014,253.9531,192.014,257.9531,188.014,253.9531,192.014,249.9531,183.014,253.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="201.5" y="247.02">replicate</text><!--MD5=[9d8f1bc258c46e786431d84e9583298d]
+link RM2 to RM3--><path d="M392.092,253.9531 C417.876,253.9531 447.841,253.9531 473.653,253.9531 " fill="none" id="RM2-RM3" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="478.757,253.9531,469.757,249.9531,473.757,253.9531,469.757,257.9531,478.757,253.9531" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="387.014,253.9531,396.014,257.9531,392.014,253.9531,396.014,249.9531,387.014,253.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="405.5" y="247.02">replicate</text><!--MD5=[12b792cbd43f1e58165a58f28962421e]
+link RM1 to RS1--><path d="M131.245,272.2101 C139.598,306.1651 158.16,381.6261 167.462,419.4411 " fill="none" id="RM1-to-RS1" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="168.765,424.7371,170.4997,415.0422,167.5708,419.8818,162.7312,416.9529,168.765,424.7371" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="150" y="341.02">replicate</text><!--MD5=[b53feb884dd78dc0f476dc1c04271943]
+link RM2 to RS2--><path d="M331,272.2101 C331,306.1651 331,381.6261 331,419.4411 " fill="none" id="RM2-to-RS2" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="331,424.7371,335,415.7371,331,419.7371,327,415.7371,331,424.7371" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="332" y="341.02">replicate</text><!--MD5=[8083dcf48fa40de8254250997355641b]
+link RM3 to RS3--><path d="M530.755,272.2101 C522.402,306.1651 503.84,381.6261 494.538,419.4411 " fill="none" id="RM3-to-RS3" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="493.235,424.7371,499.2688,416.9529,494.4292,419.8818,491.5003,415.0422,493.235,424.7371" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="55" x="517" y="341.02">replicate</text><!--MD5=[2a3f924477dfccd325cac0f0fd0136c5]
+link RC1 to RM1--><path d="M279.132,64.1621 C248.909,101.6691 177.17,190.6931 144.161,231.6561 " fill="none" id="RC1-to-RM1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="140.711,235.9381,149.4738,231.4423,143.8493,232.0457,143.2459,226.4211,140.711,235.9381" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="253" y="109.02">write</text><!--MD5=[c38bf2277d47a512fe570ad1150def91]
+link RC2 to RM3--><path d="M442.437,64.1621 C460.752,101.5171 504.122,189.9731 524.313,231.1561 " fill="none" id="RC2-to-RM3" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="526.658,235.9381,526.2875,226.0962,524.4569,231.4487,519.1044,229.6181,526.658,235.9381" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="464" y="109.02">write</text><!--MD5=[9a049b3b7b6c8261a88c2c9c9152dd6a]
+reverse link RS1 to RC3--><path d="M174.359,466.1041 C176.372,498.9091 180.103,559.7362 181.933,589.5563 " fill="none" id="RS1-backto-RC3" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="174.051,461.0891,170.6115,470.3179,174.3582,466.0797,178.5964,469.8264,174.051,461.0891" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="29" x="181" y="554.02">read</text><!--MD5=[7568a199115766f64e62b723ca10c32d]
+reverse link RS2 to RC4--><path d="M330.049,466.1041 C328.64,498.9091 326.028,559.7362 324.747,589.5563 " fill="none" id="RS2-backto-RC4" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="330.264,461.0891,325.882,469.9094,330.0497,466.0845,333.8746,470.2523,330.264,461.0891" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="29" x="327" y="554.02">read</text><!--MD5=[aa94f70a54d0ca342011d60c1629f505]
+@startuml
+Title Redis Cluster - Multi-Master
+
+skinparam componentStyle rectangle
+
+together {
+  [Redis Client] as RC1
+  [Redis Client] as RC2
+
+}
+
+together {
+  [Redis Client] as RC3
+  [Redis Client] as RC4
+}
+
+component "Redis Cluster" as RC {
+  together {
+    node "Node 1" as N1 {
+      [Redis Master] as RM1
+    }
+      
+    node "Node 2" as N2 {
+      [Redis Master] as RM2
+    }
+    
+    node "Node 3" as N3 {
+      [Redis Master] as RM3
+    }
+      
+    [RM1] <.> [RM2] : replicate
+    [RM2] <.> [RM3] : replicate
+  }
+  
+  together {
+    node "Node 4" as N4 {
+      [Redis Slave] as RS1
+    }
+      
+    node "Node 5" as N5 {
+      [Redis Slave] as RS2
+    }
+    
+    node "Node 6" as N6 {
+      [Redis Slave] as RS3
+    }
+  }
+  
+  [RM1] ..> [RS1] : replicate
+  [RM2] ..> [RS2] : replicate
+  [RM3] ..> [RS3] : replicate
+}
+
+[RC1] - -> [RM1] : write
+[RC2] - -> [RM3] : write
+[RC3] -u-> [RS1] : read
+[RC4] -u-> [RS2] : read
+@enduml
+
+PlantUML version 1.2021.16beta2(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,37 @@
+@startuml
+
+Title Redis Cluster - Sharding
+
+skinparam componentStyle rectangle
+left to right direction
+
+[Redis Client] as RC11
+[Redis Client] as RC12
+
+
+component "Shard #1" as S1 {
+  [Redis Master] as RM1
+  [Redis Slave] as RS1
+
+  [RM1] ..> [RS1] : replicate
+}
+
+[RC11] --> [RM1] : "Key 1\nwrite"
+[RS1] <-- [RC12] : "Key 1\nread"
+
+[Redis Client] as RC21
+[Redis Client] as RC22
+
+component "Shard #2" as S2 {
+  [Redis Master] as RM2
+  [Redis Slave] as RS2
+
+  [RM2] ..> [RS2] : replicate
+}
+
+[RC21] --> [RM2] : "Key 2\nwrite"
+[RS2] <-- [RC22] : "Key 2\nread"
+
+S2 -[hidden]> S1
+
+@enduml
