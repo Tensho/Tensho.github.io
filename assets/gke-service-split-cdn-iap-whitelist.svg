@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="410px" preserveAspectRatio="none" style="width:686px;height:410px;background:#FFFFFF;" version="1.1" viewBox="0 0 686 410" width="686px" zoomAndPan="magnify"><defs><filter height="300%" id="f1891fl8uaa4j6" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="383" x="145.25" y="16.708">GKE Service Split (CDN + IAP + Whitelist)</text><!--MD5=[85c29abb6924ba539b01a2368cd4e5a6]
+cluster Cluster--><rect fill="#FFFFFF" filter="url(#f1891fl8uaa4j6)" height="371" style="stroke:#000000;stroke-width:1.5;" width="571" x="103.5" y="27.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="154" x="312" y="42.9482">Kubernetes Cluster</text><!--MD5=[c8ffe1ebc5ac90f537fe46e912343a18]
+cluster Deployment--><rect fill="#1E90FF" filter="url(#f1891fl8uaa4j6)" height="158" style="stroke:#000000;stroke-width:1.5;" width="112" x="538.5" y="139.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="96" x="546.5" y="154.9482">Deployment</text><!--MD5=[76135f9afc5f2b97af6996623fc8da30]
+entity Ingress--><rect fill="#FEFECE" filter="url(#f1891fl8uaa4j6)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="71" x="119.5" y="204.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="129.5" y="227.9482">Ingress</text><!--MD5=[6af51ab06d51faaddd6da17a4ff36c96]
+entity BackendConfigIAP--><rect fill="#FFC0CB" filter="url(#f1891fl8uaa4j6)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="156" x="307.5" y="133.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="317.5" y="156.9482">BackendConfig IAP</text><!--MD5=[16ac780ffa2d52103a04a5b155c90cca]
+entity BackendConfigCDN--><rect fill="#FFFFFF" filter="url(#f1891fl8uaa4j6)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="164" x="303.5" y="275.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="144" x="313.5" y="298.9482">BackendConfig CDN</text><!--MD5=[bdbe60e412fb51f17c114bd1c4be94e1]
+entity ServiceIAP--><rect fill="#FFC0CB" filter="url(#f1891fl8uaa4j6)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="100" x="335.5" y="62.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="345.5" y="85.9482">Service IAP</text><!--MD5=[17737e49c286898813382e12d6080e03]
+entity Service--><rect fill="#FEFECE" filter="url(#f1891fl8uaa4j6)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="73" x="349" y="204.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="359" y="227.9482">Service</text><!--MD5=[206b71576a27835fdb87753f16768fca]
+entity ServiceCDN--><rect fill="#FFFFFF" filter="url(#f1891fl8uaa4j6)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="108" x="331.5" y="346.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="341.5" y="369.9482">Service CDN</text><!--MD5=[9288fc4cd2bb226c9e784e92462c1726]
+entity Pod1--><rect fill="#1E90FF" filter="url(#f1891fl8uaa4j6)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="47" x="570.5" y="245.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="580.5" y="268.9482">Pod</text><!--MD5=[7ba886567fdd810a486ca9cb47113f5a]
+entity Pod2--><rect fill="#1E90FF" filter="url(#f1891fl8uaa4j6)" height="36.2969" style="stroke:#000000;stroke-width:1.5;" width="47" x="570.5" y="174.9531"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="27" x="580.5" y="197.9482">Pod</text><!--MD5=[0ba5ee7700168656dc1b457c6fe9fdac]
+entity Client--><ellipse cx="27.5" cy="222.9531" fill="#FEFECE" filter="url(#f1891fl8uaa4j6)" rx="8" ry="8" style="stroke:#A80036;stroke-width:1.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="6" y="252.9482">Client</text><!--MD5=[2ccb25e063ef68d5336cfdd031f59a46]
+reverse link Service to ServiceIAP--><!--MD5=[1b13f6541b35f763f8171db614e8517d]
+reverse link ServiceCDN to Service--><!--MD5=[aa9de79f49d1bfd668e7c1ed4b765918]
+link Pod1 to Pod2--><!--MD5=[5746eb7024f039a335d4b5cf0a7d7a31]
+link Ingress to ServiceIAP--><path d="M177.948,204.6511 C205.887,181.9271 256.217,142.8831 303.5,115.9531 C312.85,110.6281 323.168,105.5901 333.217,101.0821 " fill="none" id="Ingress-to-ServiceIAP" style="stroke:#FF0000;stroke-width:1.0;"/><polygon fill="#FF0000" points="337.812,99.0491,327.9632,99.032,333.2394,101.0719,331.1995,106.3481,337.812,99.0491" style="stroke:#FF0000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="11" x="241.5" y="133.02">/*</text><!--MD5=[27022ce52f07ef8d12a98d49941cead5]
+link Ingress to Service--><path d="M190.704,222.9531 C231.734,222.9531 299.937,222.9531 343.524,222.9531 " fill="none" id="Ingress-to-Service" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="348.714,222.9531,339.714,218.9531,343.714,222.9531,339.714,226.9531,348.714,222.9531" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51" x="221.5" y="219.02">/version</text><!--MD5=[c9cca6b7fe2dbbec8b0653b63b8ac1a5]
+link Ingress to ServiceCDN--><path d="M177.948,241.2551 C205.887,263.9791 256.217,303.0231 303.5,329.9531 C312.85,335.2785 323.168,340.3166 333.217,344.824 " fill="none" id="Ingress-to-ServiceCDN" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="337.812,346.8568,331.1998,339.5576,333.2395,344.8339,327.9632,346.8736,337.812,346.8568" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="222" y="271.02">/static/*</text><!--MD5=[85033e8af5b9706dd5d29cfdc97eda57]
+link BackendConfigIAP to ServiceIAP--><path d="M385.5,133.9261 C385.5,124.0581 385.5,114.1901 385.5,104.3231 " fill="none" id="BackendConfigIAP-to-ServiceIAP" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="385.5,99.1621,381.5,108.1621,385.5,104.1621,389.5,108.1621,385.5,99.1621" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[b212c111b6cc09d8c09cbce014aea788]
+reverse link ServiceCDN to BackendConfigCDN--><path d="M385.5,341.7656 C385.5,331.8979 385.5,322.0302 385.5,312.1621 " fill="none" id="ServiceCDN-backto-BackendConfigCDN" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="385.5,346.9258,389.5,337.9258,385.5,341.9258,381.5,337.9258,385.5,346.9258" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5518634f06ffec447d0ac01001f96bce]
+link ServiceIAP to Pod1--><path d="M435.8,96.2061 C447.068,101.2581 458.393,107.7521 467.5,115.9531 C509.939,154.1731 490.322,187.3631 530.5,227.9531 C540.454,238.0091 553.798,246.2021 565.6,252.2171 " fill="none" id="ServiceIAP-to-Pod1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="570.207,254.4961,563.914,246.92,565.7255,252.2789,560.3665,254.0904,570.207,254.4961" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[f664181ecca1f7ac51e27c89cf29c6d2]
+link ServiceIAP to Pod2--><path d="M435.538,98.3931 C455.526,106.1891 478.573,116.0751 498.5,126.9531 C522.505,140.0571 547.811,157.9791 566.189,171.8411 " fill="none" id="ServiceIAP-to-Pod2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="570.236,174.9131,565.4852,166.2858,566.2532,171.8903,560.6487,172.6583,570.236,174.9131" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[41883b93543bee90c14950cf5ec74128]
+link Service to Pod1--><path d="M422.47,230.0951 C463,238.1421 528.03,251.0531 564.971,258.3881 " fill="none" id="Service-to-Pod1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="570.211,259.4281,562.1629,253.7511,565.3068,258.4539,560.6041,261.5978,570.211,259.4281" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[504424bca3a7d7b8df33ea304cb83b67]
+link Service to Pod2--><path d="M422.47,217.7271 C463,211.8391 528.03,202.3921 564.971,197.0251 " fill="none" id="Service-to-Pod2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="570.211,196.2641,560.7287,193.602,565.2631,196.9842,561.8809,201.5186,570.211,196.2641" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[058bfa318e1239ddaaa90368ab1c7a16]
+link ServiceCDN to Pod1--><path d="M430.073,346.849 C442.27,341.586 455.476,335.7022 467.5,329.9531 C501.789,313.5581 540.366,292.9331 565.587,279.1431 " fill="none" id="ServiceCDN-to-Pod1" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="570.137,276.6511,560.322,277.4676,565.752,279.0536,564.166,284.4836,570.137,276.6511" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[90845e3112b58bb6b93a7d17763119f5]
+link ServiceCDN to Pod2--><path d="M439.794,347.4769 C449.654,342.7588 459.387,336.9648 467.5,329.9531 C507.815,295.1131 492.025,264.8151 530.5,227.9531 C540.647,218.2311 554.014,210.2721 565.781,204.4151 " fill="none" id="ServiceCDN-to-Pod2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="570.371,202.1941,560.5273,202.5118,565.8698,204.3711,564.0105,209.7137,570.371,202.1941" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5c120e158ca0d930cefbe75667cee584]
+link Client to Ingress--><path d="M36.7344,222.9531 C52.2381,222.9531 86.6815,222.9531 114.25,222.9531 " fill="none" id="Client-to-Ingress" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="119.312,222.9531,110.312,218.9531,114.312,222.9531,110.312,226.9531,119.312,222.9531" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[cff9c91e46f57cb4b978048aa83cb311]
+@startuml
+title GKE Service Split (CDN + IAP + Whitelist)
+skinparam componentStyle rectangle
+left to right direction
+
+component "Kubernetes Cluster" as Cluster {
+  [Ingress]
+  [BackendConfig IAP] as BackendConfigIAP #Pink
+  [BackendConfig CDN] as BackendConfigCDN #White
+  [Service IAP] as ServiceIAP #Pink
+  [Service]
+  [Service CDN] as ServiceCDN #White
+
+  [ServiceIAP] -[hidden]l-> [Service]
+  [Service] -[hidden]l-> [ServiceCDN]
+
+  component "Deployment" #DodgerBlue {
+    [Pod] as Pod1 #DodgerBlue
+    [Pod] as Pod2 #DodgerBlue
+
+    [Pod1] -[hidden]> [Pod2]
+  }
+
+  [Ingress] -[#Red]-> [ServiceIAP] : /*
+  [Ingress] - -> [Service] : /version
+  [Ingress] - -> [ServiceCDN] : /static/*
+
+  [BackendConfigIAP] -r-> [ServiceIAP]
+  [BackendConfigCDN] -l-> [ServiceCDN]
+
+  [ServiceIAP] - -> [Pod1]
+  [ServiceIAP] - -> [Pod2]
+  [Service] - -> [Pod1]
+  [Service] - -> [Pod2]
+  [ServiceCDN] - -> [Pod1]
+  [ServiceCDN] - -> [Pod2]
+}
+
+Client - -> Ingress
+@enduml
+
+PlantUML version 1.2021.17beta10(Unknown compile time)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,33 @@
+@startuml
+
+title GKE Service Split (CDN)
+skinparam componentStyle rectangle
+left to right direction
+
+component "Kubernetes Cluster" as Cluster {
+  [Ingress]
+  [BackendConfig CDN] as BackendConfigCDN #White
+  [Service CDN] as ServiceCDN #White
+  [Service] #Pink
+
+  component "Deployment" #DodgerBlue {
+    [Pod] as Pod1 #DodgerBlue
+    [Pod] as Pod2 #DodgerBlue
+
+    [Pod1] -[hidden]> [Pod2]
+  }
+
+  [Ingress] --> [Service] : /*
+  [Ingress] --> [ServiceCDN] : /static/*
+
+  [BackendConfigCDN] -> [ServiceCDN]
+
+  [ServiceCDN] --> [Pod1]
+  [ServiceCDN] --> [Pod2]
+  [Service] --> [Pod1]
+  [Service] --> [Pod2]
+}
+
+Client --> Ingress
+
+@enduml

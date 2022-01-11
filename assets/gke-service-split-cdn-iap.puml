@@ -1,0 +1,36 @@
+@startuml
+
+title GKE Service Split (CDN + IAP)
+skinparam componentStyle rectangle
+left to right direction
+
+component "Kubernetes Cluster" as Cluster {
+  [Ingress]
+  [BackendConfig IAP] as BackendConfigIAP #Pink
+  [BackendConfig CDN] as BackendConfigCDN #White
+  [Service IAP] as ServiceIAP #Pink
+  [Service CDN] as ServiceCDN #White
+
+
+  component "Deployment" #DodgerBlue {
+    [Pod] as Pod1 #DodgerBlue
+    [Pod] as Pod2 #DodgerBlue
+
+    [Pod1] -[hidden]> [Pod2]
+  }
+
+  [Ingress] -[#Red]-> [ServiceIAP] : /*
+  [Ingress] --> [ServiceCDN] : /static/*
+
+  [BackendConfigIAP] -r-> [ServiceIAP]
+  [BackendConfigCDN] -l-> [ServiceCDN]
+
+  [ServiceIAP] --> [Pod1]
+  [ServiceIAP] --> [Pod2]
+  [ServiceCDN] --> [Pod1]
+  [ServiceCDN] --> [Pod2]
+}
+
+Client --> Ingress
+
+@enduml

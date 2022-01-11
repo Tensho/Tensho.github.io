@@ -1,0 +1,25 @@
+@startuml
+
+title Kubernetes 101
+skinparam componentStyle rectangle
+left to right direction
+
+component "Kubernetes Cluster" as Cluster {
+  [Ingress]
+  [Service] #DodgerBlue
+
+  component "Deployment" #DodgerBlue {
+    [Pod] as Pod1 #DodgerBlue
+    [Pod] as Pod2 #DodgerBlue
+
+    [Pod1] -[hidden]> [Pod2]
+  }
+
+  [Ingress] --> [Service]
+  [Service] --> [Pod1]
+  [Service] --> [Pod2]
+}
+
+Client --> Ingress
+
+@enduml
